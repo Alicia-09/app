@@ -93,8 +93,68 @@ Crear cuenta
                             <input type="password" class="form-control" id="ContraConfirm"
                                 name="ContraConfirm" placeholder="Confirmar contraseña">
                         </div>
-
                     </section>
+
+                    <section class="row mb-3">
+                        <div class="col-6">
+                            <label for="Peso" class="form-label">Peso (kg):</label>
+                            <input type="number" class="form-control" id="Peso" name="Peso" required
+                                minlength="3" maxlength="20" placeholder="Peso actual"
+                                value="{{ request.form.get('Peso', '')}}">
+                        </div>
+
+
+                        <div class="col-6">
+                            <label for="Altura" class="form-label">Altura (cm):</label>
+                            <input type="number" class="form-control" id="Altura" name="Altura step="0.01"
+                                value="{{ request.form.get('Apellido', '')}}"
+                                placeholder="Altura">
+                        </div>
+                    </section>
+
+                    <div class="mb-3">
+                        <label for="Actividad" class="form-label">Nivel de actividad:</label>
+                        <select class="form-select" id="Actividad" name="Actividad"
+                        value="{{ request.form.get('Actividad', '')}}">
+                        <option selected>Seleccione su nivel</option>
+                        <option value="1">Sedentario (Poco o ningun ejercicio)</option>
+                        <option value="2">Actividad ligera (Ejercicio 1-3 dias/semana)</option>
+                        <option value="3">Actividad Moderada (Ejercicio 3-5 dias/semana)</option>
+                        <option value="3">Actividad Alta (Ejercicio 6-7 dias/semana)</option>
+                    </select>
+
+                    
+                    <div class="mb-3">
+                        <label for="objetivos" class="form-label">Objetivos:</label>
+                        <select class="form-select" id="Objetivos" name="Objetivos"
+                        value="{{ request.form.get('Objetivos', '')}}">
+                        <option selected>Seleccione su objetivo</option>
+                        <option value="1">Bajar de peso</option>
+                        <option value="2">Aumentar masa muscular</option>
+                        <option value="3">Mantener peso actual</option>
+                        <option value="3">Controlar una condicion(diabete,etc)</option>
+                    </select>
+
+                    <div class="mb-3">
+                        <label for="objetivos" class="form-label">Preferencias y restricciones:</label>
+                        <select class="form-select" id="Objetivos" name="Objetivos"
+                        value="{{ request.form.get('Objetivos', '')}}">
+                        <option selected>Seleccione lo de su preferencia</option>
+                        <option value="1">Alergias(mani,mariscos,etc)</option>
+                        <option value="2">Intolerancia (lactosa,gluten,etc)</option>
+                        <option value="3">Especificas(vegana, vegetariana)</option>
+                        <option value="3">Alimentos que no le gustan</option>
+                    </select>
+
+                    <div class="mb-3">
+                        <label for="objetivos" class="form-label">Nivel de experiencia:</label>
+                        <select class="form-select" id="Objetivos" name="Objetivos"
+                        value="{{ request.form.get('Objetivos', '')}}">
+                        <option selected>Seleccione lo de su preferencia</option>
+                        <option value="1">Principiante en la cocina</option>
+                        <option value="2">Se hacer lo basico</option>
+                        <option value="3">Chef aficionado</option>
+                    </select>
 
                     <div class="card-body p-4 p-md-5">
                         <div class="container mt-4">
@@ -112,21 +172,8 @@ Crear cuenta
                         {% endwith %}
                     </div>
 
-                    <p class="text-small">
-                        Es posible que las personas que usan nuestro servicio hayan subido tu información de
-                        contacto a
-                        Facebook.
-                        <a href="#">Mas informacion</a>
-                    </p>
-
-                    <p class="text-small">
-                        Al hacer clic en Registrarte, aceptas las <a href="#">Condiciones</a>
-                        <a href="#">Politica de privacidad</a> y la <a href="#">Politica de cookies</a>
-                        Es posible que te enviemos notificaciones por SMS, que podrás desactivar cuando quieras.
-                    </p>
-
                     <div class="text-center mb-3">
-                        <button type="submit" class="btn bg-danger text-white">Registrarte</button>
+                        <button type="submit" class="btn bg-success text-white">Registrarte</button>
                     </div>
 
                     <p class="text-center">

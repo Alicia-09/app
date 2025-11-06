@@ -7,7 +7,7 @@ def index():
     return render_template("inicio.html")
 
 @app.route("/inicio")
-def index():
+def inicio():
     return render_template("inicio.html")
 
 @app.route("/crearCuenta" , methods = ["GET", "POST"])
@@ -22,6 +22,9 @@ def crearCuenta():
         Email = request.form["Email"]
         Contra = request.form["Contra"]
         ContraConfirm = request.form["ContraConfirm"]
+        Peso = request.form["Peso"]
+        Altura = request.form["Altura"]
+        Actividad = request.form["Actividad"]
     
         if Contra != ContraConfirm:
             error = "La contraseña no coincide"
