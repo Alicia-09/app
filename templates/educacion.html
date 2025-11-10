@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block pagina %}
+Educacion e Informacion
+{% endblock %}
+
+{% block titulo %}
+Educacion e Informacion
+{% endblock %}
+
+{% block menu %}
+
+<div style="background-color:#E9F7EF;">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="fw-bold mb-3">
+
+                    <div class="col-md-6 text-center mt-4 mt-md-0">
+                        <img src="{{ url_for('static', filename='img/app.png') }}"
+                            class="img-fluid" 
+                            alt="">
+
+                    Educacion e Informacion
+                </h1>
+
+                <p class="text-secondary mb-4">
+                    Nuestro proposito es ayudar a miles de personas a lograr una alimentacion mas sana
+                    de manera simple, efectiva y adaptada a ti.
+                    Descubre la gran cantidad de herramientas con las que contamos y explora nuestra app
+                    sumergiendote en un nutrimundo lleno de informacion valiosa que te servira para comenzar un cambio en tu vida.
+                </p>
+            </div>
+
+            <div class="col-md-6 text-center mt-4 mt-md-0">
+                <img src="{{ url_for('static', filename='img/app.png') }}"
+                    class="img-fluid" 
+                    alt="app en teléfono">
+            </div>
+        </div>
+    </div>-
+</div>

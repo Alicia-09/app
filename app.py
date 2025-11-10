@@ -101,5 +101,9 @@ def usuario():
         return redirect(url_for('inicio'))
     return render_template('usuario.html')
 
+@app.route("/educacion")
+def educacion():
+    return render_template("educacion.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
